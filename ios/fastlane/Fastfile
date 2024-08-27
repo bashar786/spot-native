@@ -1,0 +1,20 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build and distribute a production release to the App Store"
+  lane :production do
+    build_app(
+      scheme: "Spot",
+      export_method: "app-store"
+    )
+    upload_to_testflight
+    deliver(
+      username: "spotpaynetwork@gmail.com",
+      app_identifier: "com.spotpay.network",
+      skip_metadata: true,
+      skip_screenshots: true,
+      app_version: "1.2",
+      app_id: "6624294890"
+    )
+  end
+end

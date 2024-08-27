@@ -1,0 +1,28 @@
+{
+  "build": {
+    "preview": {
+      "distribution": "internal",
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "ios": {
+        "distribution": "store",
+        "simulator": false
+      },
+      "android": {
+        "distribution": "store"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "ios": {
+        "appleId": "spotpaynetwork@gmail.com",
+        "ascAppId": "6624294890"
+      },
+      "android": {}
+    }
+  }
+}
